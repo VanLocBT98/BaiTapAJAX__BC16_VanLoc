@@ -153,12 +153,14 @@ function EDIT(maNhanVien) {
         console.log(result.data);
         // load du liệu ra input
         var nhanVien = result.data;
+        console.log(nhanVien)
         $("#maNhanVien").value = nhanVien.maNhanVien;
         $("#tenNhanVien").value = nhanVien.tenNhanVien;
         $("#luongCoBan").value = nhanVien.luongCoBan;
         $("#soGioLamTrongThang").value = nhanVien.soGioLamTrongThang;
         var slChucVu = $('#chucVu');
         var index = slChucVu.selectedIndex;
+        console.log(index)
         slChucVu.options[index] = nhanVien.chucVu;
         $("#maNhanVien").disabled = true;
 
